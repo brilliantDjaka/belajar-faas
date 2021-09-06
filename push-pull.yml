@@ -1,0 +1,16 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.179.245.249:8080
+functions:
+  push-pull:
+    lang: node12
+    handler: ./push-pull
+    image: brianrofiq/push-pull:latest
+    secrets:
+      - db-user
+      - db-password
+      - db-host
+    environment:
+      db-name: dazclioc
+      db-port: 5432

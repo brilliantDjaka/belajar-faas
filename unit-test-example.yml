@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.179.245.249:8080
+functions:
+  unit-test-example:
+    lang: node12
+    handler: ./unit-test-example
+    image: brianrofiq/unit-test-example:latest
+
+  hackernewsbot:
+    lang: node12
+    handler: ./hackernewsbot
+    image: brianrofiq/hackernewsbot:latest
+

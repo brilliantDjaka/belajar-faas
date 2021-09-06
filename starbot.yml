@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  starbot:
+    lang: node12
+    handler: ./starbot
+    image: brianrofiq/starbot:latest
+    environment:
+      query_url: http://api.open-notify.org/astros.json
+      add_people: true

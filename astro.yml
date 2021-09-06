@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.179.245.249:8080
+functions:
+  astro:
+    lang: node12
+    handler: ./astro
+    image: brianrofiq/astro:latest
+    secrets:
+      - astro-key
+
